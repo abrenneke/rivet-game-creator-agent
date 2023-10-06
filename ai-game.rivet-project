@@ -1,0 +1,2602 @@
+version: 4
+data:
+  attachedData:
+    trivet:
+      testSuites: []
+      version: 1
+  graphs:
+    -PAtI4-0Rab-nlptVGQv3:
+      metadata:
+        description: ""
+        id: -PAtI4-0Rab-nlptVGQv3
+        name: Run API Command
+      nodes:
+        '[-LVa1XA-yCehb3o2PlRPZ]:subGraph "Subgraph"':
+          data:
+            graphId: 78dbwdeW8vjK_zu0mGxgO
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input6
+          visualData: 779.8237747897748/-17.192454036330805/330/51
+        '[8W_EbYqaO_y5_vRLMT_k0]:subGraph "Subgraph"':
+          data:
+            graphId: JV53CBLj-Il8sMUw4JGSZ
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input1
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input7
+          visualData: 736.2810367964079/-459.85731856568634/330/54
+        '[AeInrjVnBSpyAoOZqXa9h]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input3
+          visualData: 622.9636625131976/334.5630898370428/155/46
+        '[Aj8MNNIBis_3U-7bGG4i2]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" UFM7KEs9Hfq5uJUyUsV8L/input2
+          visualData: -814.9632029766124/-310.6016688412525/155/65
+        '[B96XOMuCdSu3MCehVctf1]:match "Match"':
+          data:
+            caseCount: 8
+            cases:
+              - show-files
+              - shell-command
+              - read-file$
+              - write-file
+              - call-agent
+              - read-files
+              - request-user-feedback
+              - save-to-shared-memory
+          outgoingConnections:
+            - case1->"Subgraph" OwQ_ksyimaqAASGbt5eoy/arguments
+            - case2->"Subgraph" eWaEtUdAY-kbWfEp9TuSR/arguments
+            - case3->"Subgraph" nzA7dNPy30UdDPaEG8azn/arguments
+            - case4->"Subgraph" Nnawy5vD1gshM-8M1Ljm1/arguments
+            - case5->"Subgraph" -LVa1XA-yCehb3o2PlRPZ/arguments
+            - case6->"Subgraph" 8W_EbYqaO_y5_vRLMT_k0/arguments
+            - case7->"Subgraph" zIVAvPxVxg7RCkxGeQVXa/arguments
+            - case8->"Subgraph" tBBAx4b0qANUmZts5rRjd/arguments
+            - unmatched->"If" AeInrjVnBSpyAoOZqXa9h/if
+          visualData: 66/-563/280/22
+        '[DFsYSei5Z3Qp4yaIcTRdP]:text "Text"':
+          data:
+            text: 'ERROR: Detected the phrase "system message" in your response. You are not
+              the system. You cannot say "system message". You must call API
+              commands and only the system is allowed to say "System Message"'
+          outgoingConnections:
+            - output->"If" z3hugXZKEh3-lGyB4kk5j/value
+          visualData: -1996.4257639413042/-365.6962739084026/330/65
+        '[FJeakRVZS8aW6OF4aKbEa]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Prompt" LxmV-b_eUSdr0bJd48Q21/input
+          visualData: 1828/123/180/null
+        '[INdJyu_CJjm0zcCN2RUk8]:text "Text"':
+          data:
+            text: (No arguments)
+          outgoingConnections:
+            - output->"If/Else" _AEE8nZOUFG91raOG60IA/false
+          visualData: -711.9923935083742/339.4169885847408/330/48
+        '[LxmV-b_eUSdr0bJd48Q21]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: >-
+              {{input}}
+
+
+              System Message: This is the end of the result of your command. Do not repeat what you have learned here unless you are repeating it for another command. 
+
+
+              Your next message should call another system API command.
+            type: user
+            useNameInput: true
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Coalesce" UFM7KEs9Hfq5uJUyUsV8L/input1
+          visualData: 2248.4613080082077/106.49718370940408/280/56
+        '[MwZ8JLklGofPzkJUGzN-j]:match "Match"':
+          data:
+            caseCount: 1
+            cases:
+              - \b[Ss]ystem [Mm]essage\b
+          outgoingConnections:
+            - case1->"If" z3hugXZKEh3-lGyB4kk5j/if
+            - unmatched->"Match" e2tNXoT6sZ6AOHn9RpEqE/input
+            - unmatched->"Match" e2tNXoT6sZ6AOHn9RpEqE/value
+          visualData: -1988.9120937666805/-132.7724984950582/280/65
+        '[Nnawy5vD1gshM-8M1Ljm1]:subGraph "Subgraph"':
+          data:
+            graphId: 0O0gLvp--5hT8SbfV1ttk
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input2
+          visualData: 778.32615707689/-166.65096624507362/330/34
+        '[OwQ_ksyimaqAASGbt5eoy]:subGraph "Subgraph"':
+          data:
+            graphId: QWG5ENV5a3wkqB4V1rcmE
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input8
+          visualData: 744.7835636735169/-1019.4269264602337/330/52
+        '[QLYFL-5pIjidJhdYDub8a]:graphOutput "Graph Output"':
+          data:
+            dataType: chat-message
+            id: output
+          visualData: 3086.27262433379/167.32296252029371/330/67
+        '[S-iFg5_gRoaJjwWHe5dzi]:text "Text"':
+          data:
+            text: >-
+              I will now make the necessary modifications to the
+              'gameMechanics.ts' and 'src/index.ts' files. In
+              'gameMechanics.ts', I will replace 'drawBall' with 'draw' on
+              'ballPowerUpMechanics', and in 'src/index.ts', I will remove the
+              '.ts' extension from the import statement.
+
+
+              CALL_SYSTEM_COMMAND: write-file
+
+
+              gameMechanics.ts
+
+              ```
+
+              import Ball from './ball';
+
+              import BallPowerUpMechanics from './ballPowerUpMechanics';
+
+
+              interface Target {
+                x: number;
+                y: number;
+                update: () => void;
+                draw: (ctx: CanvasRenderingContext2D) => void;
+                onHit: () => void;
+              }
+
+
+              interface PowerUp {
+                x: number;
+                y: number;
+                onHit: () => void;
+              }
+
+
+              let ball = new Ball();
+
+
+              let ballPowerUpMechanics = new BallPowerUpMechanics();
+
+
+              export function updateGameState(): void {
+                  try {
+                      ballPowerUpMechanics.updateBallAndPowerUps();
+                  } catch (error) {
+                      console.error('An error occurred during game state update:', error);
+                  }
+              }
+
+
+              export function drawGameObjects(): void {
+                  try {
+                      ballPowerUpMechanics.draw();
+                  } catch (error) {
+                      console.error('An error occurred during game object drawing:', error);
+                  }
+              }
+
+
+              export function checkCollisions(): void {
+                  // Implementation of checkCollisions function
+              }
+
+
+              export function checkGameOver(): void {
+                  // Implementation of checkGameOver function
+              }
+
+
+              export function drawBall(): void {
+                  ballPowerUpMechanics.draw();
+              }
+
+              ```
+
+
+              CALL_SYSTEM_COMMAND: write-file
+
+
+              src/index.ts
+
+              ```
+
+              import gameLoop from '../gameLoop';
+
+
+              gameLoop();
+
+              ```
+          outgoingConnections:
+            - output->"Graph Input" mc41GPQ3vtW3knYCNQ2tn/default
+          visualData: -2904.607278838218/-224.33546131221945/330/65
+        '[UFM7KEs9Hfq5uJUyUsV8L]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" QLYFL-5pIjidJhdYDub8a/value
+          visualData: 2729.778762036568/283.22837764418034/180/null
+        '[Z1qTQ8mLB_iMlDnKa5XzE]:text "Text"':
+          data:
+            text: "ERROR: You can only call one system command per message. You have
+              attempted to call multiple system commands."
+          outgoingConnections:
+            - output->"If" Aj8MNNIBis_3U-7bGG4i2/value
+          visualData: -1211.0190463740694/-251.68427064989518/330/65
+        '[_AEE8nZOUFG91raOG60IA]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Match" B96XOMuCdSu3MCehVctf1/value
+          visualData: -293.5706474996504/113.56434159139545/205/49
+        '[e2tNXoT6sZ6AOHn9RpEqE]:match "Match"':
+          data:
+            caseCount: 1
+            cases:
+              - CALL_SYSTEM_COMMAND((.|\n)+)CALL_SYSTEM_COMMAND
+          outgoingConnections:
+            - case1->"If" Aj8MNNIBis_3U-7bGG4i2/if
+            - unmatched->"Code" hQ9CjVClYBMEXRZyGzetZ/input
+            - unmatched->"Code" uyuQEEiGdoCH64p8K5mAG/input
+          visualData: -1358.085956719963/-32.520975709245775/388.0152300174882/65
+        '[eWaEtUdAY-kbWfEp9TuSR]:subGraph "Subgraph"':
+          data:
+            graphId: djdWTkEBNypKtphdCUz1K
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input4
+          visualData: 741.4572472505442/-819.9904480125019/330/53
+        '[h9H2Ru2O5wcmF7zQgo9q2]:text "Text"':
+          data:
+            text: "System Response: No command found, or unknown command"
+          outgoingConnections:
+            - output->"If" AeInrjVnBSpyAoOZqXa9h/value
+          visualData: 3.8103003282071235/339.01616568395593/330/45
+        '[hQ9CjVClYBMEXRZyGzetZ]:code "Code"':
+          data:
+            code: >+
+              const match = inputs.input.value.match(/CALL_SYSTEM_COMMAND:
+              ([\w\d-_]+)/);
+
+
+              if (!match) {
+                  return {
+                      output: {
+                          type: 'string',
+                          value: '',
+                      }
+                  };
+              }
+
+
+              const commandName = match[1];
+
+
+              return {
+                  output: {
+                      type: 'string',
+                      value: commandName
+                  }
+              };
+
+
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Match" B96XOMuCdSu3MCehVctf1/input
+            - output->"Prompt" LxmV-b_eUSdr0bJd48Q21/name
+          visualData: -481.22723134885564/-524.0984200036783/230/43
+        '[mc41GPQ3vtW3knYCNQ2tn]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: true
+          outgoingConnections:
+            - data->"Match" MwZ8JLklGofPzkJUGzN-j/input
+            - data->"Match" MwZ8JLklGofPzkJUGzN-j/value
+          visualData: -2479.984782509012/-186.633397155943/330/65
+        '[nzA7dNPy30UdDPaEG8azn]:subGraph "Subgraph"':
+          data:
+            graphId: 5DlWJ-FP5Z24iOGRFLsqG
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input5
+          visualData: 736.2810367964079/-659.8573185656863/330/54
+        '[tBBAx4b0qANUmZts5rRjd]:subGraph "Subgraph"':
+          data:
+            graphId: IMRGO9zpcsLk8sUqmNAf6
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input10
+          visualData: 736.2810367964079/-313.95574382297923/330/58
+        '[uyuQEEiGdoCH64p8K5mAG]:code "Code"':
+          data:
+            code: >+
+              const match = inputs.input.value.match(/CALL_SYSTEM_COMMAND:
+              ([\w\d-_]+)/);
+
+
+              if (!match) {
+                  return {
+                      output: {
+                          type: 'string',
+                          value: '',
+                      }
+                  };
+              }
+
+
+              const { index } = match;
+
+
+              let args = inputs.input.value.slice(index);
+
+              args = args.slice(args.indexOf('\n') === -1 ? args.length : args.indexOf('\n'));
+
+
+              return {
+                  output: {
+                      type: 'string',
+                      value: args.trim()
+                  }
+              };
+
+
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"If/Else" _AEE8nZOUFG91raOG60IA/if
+            - output->"If/Else" _AEE8nZOUFG91raOG60IA/true
+          visualData: -567.4571842633923/-96.04288663760121/230/43
+        '[z3hugXZKEh3-lGyB4kk5j]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" UFM7KEs9Hfq5uJUyUsV8L/input3
+          visualData: -1577.1629681972843/-293.565040232012/155/65
+        '[zIVAvPxVxg7RCkxGeQVXa]:subGraph "Subgraph"':
+          data:
+            graphId: oocjea9M6IMf8u49ZhFZD
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" FJeakRVZS8aW6OF4aKbEa/input9
+          visualData: 782.8292428596244/115.18451439205307/330/57
+    0O0gLvp--5hT8SbfV1ttk:
+      metadata:
+        description: ""
+        id: 0O0gLvp--5hT8SbfV1ttk
+        name: "API: write-file"
+      nodes:
+        '[1HtVz3cJlekw1O4P4RPW5]:text "Text"':
+          data:
+            text: |-
+              test.js
+              This is a test file
+          outgoingConnections:
+            - output->"Graph Input" 2BIAiCzGgGTJ6W0NbgI26/default
+          visualData: -2380.2865596269426/581.3699452993644/330/44
+        '[2BIAiCzGgGTJ6W0NbgI26]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: ""
+            id: arguments
+            useDefaultValueInput: true
+          outgoingConnections:
+            - data->"Code" CNa6EAjLz1mOycI8NH1xk/input
+            - data->"Code" w5Lz_DOaDd1nZKq1gmJOH/input
+          visualData: -1919.5463217999686/619.1000442942029/330/44
+        '[39xOjfIW3omfJZk2LZINs]:text "Text"':
+          data:
+            text: >-
+              Does the following file contain any placeholders? A placeholder is
+              anything like `// TODO` or `// Rest of the implementation remains
+              unchanged` or `// Keep this part of the code the same`, etc.
+
+
+              Reply YES if the code contains placeholders.
+
+              Reply NO if the code does not contain placeholders
+
+
+              File:
+
+
+              ```
+
+              {{contents}}
+
+              ```
+          outgoingConnections:
+            - output->"Chat" FGOPpA5GErsfmSlflNQ4p/prompt
+          visualData: -960.6491524695643/573.5202188025421/330/null
+        '[5Soh3vID_4WOYdOtKDwSt]:writeFile "Write File"':
+          data:
+            baseDirectory: ""
+            content: ""
+            path: ""
+            useContentInput: true
+            usePathInput: true
+          outgoingConnections:
+            - content_out->"If/Else" Cf49wT1iuENskCPleJXWh/if
+            - content_out->"If/Else" Cf49wT1iuENskCPleJXWh/true
+          visualData: 1320.573810143371/494.67448941387687/230/47
+        '[7Xxhohq3Hc-llF4rwVDrA]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" pZBY6Zi4yBfrILlMON9eG/input2
+          visualData: 2269.612870234993/590.656471156479/155/47
+        '[8W8ynlQ9bpHOHuM8HF_z8]:text "Text"':
+          data:
+            text: "ERROR: You cannot write a file with placeholders such as // TODO or //
+              Rest of the file remains unchanged. You must write an entire file
+              at once, without losing any data."
+          outgoingConnections:
+            - output->"If" CA9jaZyAXptKLXVtU5l_J/value
+          visualData: 221.299942178446/49.4719436876169/330/49
+        '[9icmQtxa5pYwIlok8HowM]:text "Text"':
+          data:
+            text: "System Message: The contents have been written to the file."
+          outgoingConnections:
+            - output->"If" 7Xxhohq3Hc-llF4rwVDrA/value
+          visualData: 1583.4779197324121/1075.2827085919591/330/47
+        '[CA9jaZyAXptKLXVtU5l_J]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" pZBY6Zi4yBfrILlMON9eG/input1
+          visualData: 654.2361203074645/47.04653092498944/155/null
+        '[CNa6EAjLz1mOycI8NH1xk]:code "Code"':
+          data:
+            code: >-
+              let content =
+              inputs.input.value.slice(inputs.input.value.indexOf('\n')).trim();
+
+
+              if (content.indexOf('```') > -1) {
+                  content = content.slice(content.indexOf('```') + 3);
+                  content = content.slice(content.indexOf('\n') + 1);
+
+                  if (content.indexOf('```') > -1) {
+                      content = content.slice(0, content.indexOf('```'));
+                  }
+              }
+
+
+              return {
+                  output: {
+                      type: 'string',
+                      value: content
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Match" wyjd_5kZRVJTB4NdB1nSD/value
+            - output->"Text" 39xOjfIW3omfJZk2LZINs/contents
+          visualData: -1425.4734597966303/669.4812236817022/230/45
+        '[Cf49wT1iuENskCPleJXWh]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"If" 7Xxhohq3Hc-llF4rwVDrA/if
+          visualData: 1777.4779197324121/534.282708591959/205/47
+        '[FGOPpA5GErsfmSlflNQ4p]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Match" wyjd_5kZRVJTB4NdB1nSD/input
+          visualData: -488.13054766518525/611.0437550664192/230/46
+        '[LdXoHeT9YOA2noMTB-f1s]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2993.9494076976307/518.607956079055/330/47
+        '[NCMcu-tmWk-W-2b3KkWw7]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Write File" 5Soh3vID_4WOYdOtKDwSt/baseDirectory
+          visualData: 881.1628512392615/278.2251743453837/330/47
+        '[pXHATHI7-0xtla_i9NIAU]:text "Text"':
+          data:
+            text: (Empty file)
+          outgoingConnections:
+            - output->"If/Else" Cf49wT1iuENskCPleJXWh/false
+          visualData: 1345.4779197324121/727.282708591959/330/47
+        '[pZBY6Zi4yBfrILlMON9eG]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" LdXoHeT9YOA2noMTB-f1s/value
+          visualData: 2636.8911806027027/549.8703811408725/180/47
+        '[w5Lz_DOaDd1nZKq1gmJOH]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.split('\n')[0]
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Write File" 5Soh3vID_4WOYdOtKDwSt/path
+          visualData: -1425.4734597966303/469.4812236817022/230/45
+        '[wyjd_5kZRVJTB4NdB1nSD]:match "Match"':
+          data:
+            caseCount: 1
+            cases:
+              - YES
+          outgoingConnections:
+            - case1->"If" CA9jaZyAXptKLXVtU5l_J/if
+            - unmatched->"Write File" 5Soh3vID_4WOYdOtKDwSt/content
+          visualData: -61.349444214532696/606.8725185980778/280/48
+    18GVHobXMabLB6PnuUowi:
+      metadata:
+        description: ""
+        id: 18GVHobXMabLB6PnuUowi
+        name: "Agent: overview-agent"
+      nodes:
+        '[5KaMxR0-5SgxFOwXX8Ynw]:text "Text"':
+          data:
+            text: >-
+              You are `overview-agent` - You are specialized in reading the
+              application as a whole and replying with an overview of things.
+              You may be given a special task to get an overview for.
+
+
+              You have an extreme attention to detail and are picky with the words you use.
+
+
+              You take things slowly, and never leave out any information.
+
+
+              You prefer to read documentation files.
+
+
+              You read as few files as necessary to accomplish your task. You do not go into details.
+          outgoingConnections:
+            - output->"Subgraph" 6N8V54PZ53b4bJ4091pQF/role
+          visualData: 77/132/330/5
+        '[6N8V54PZ53b4bJ4091pQF]:subGraph "Subgraph"':
+          data:
+            graphId: nRdCJrENjFUJ4u1qvgWBX
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" eFpytYHsRSrWX7SofmmmC/value
+          visualData: 609/382/330/6
+        '[eFpytYHsRSrWX7SofmmmC]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1021/362/330/7
+        '[najIfpgFfHt9gFNRjYmpP]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" 6N8V54PZ53b4bJ4091pQF/task
+          visualData: 71/500/330/8
+    2Rwpr98wC2db8xc5eL9Br:
+      metadata:
+        description: ""
+        id: 2Rwpr98wC2db8xc5eL9Br
+        name: "Agent: analyzer-agent"
+      nodes:
+        '[PFfNMBlnbNx5X2EqfjiQ_]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1021/362/330/7
+        '[_Sjg6TAVQ7EIQxXkln7Es]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" klbVwSpvYf-PH_EHyHRSh/task
+          visualData: 71/500/330/8
+        '[eiEeO6K24wB4a995KXfPk]:text "Text"':
+          data:
+            text: >-
+              You are `analyzer-agent` - You are specialized in reading a
+              specific file and answering one or more questions about the file.
+
+
+              You are an expert coder that takes their time to answer questions in a correct way. 
+
+
+              You have a keen eye for bugs and other problems that might arise in the code, and you point them out even when you have not been asked to explicitly. 
+
+
+              You have a keen eye for things that might go wrong, and other mistakes that might have been made in code. 
+
+
+              When encountering errors, you think about what you may have done wrong to cause the error, and you try other approaches. When running commands, you analyze why they might have failed and try other approaches if the error is unclear.
+          outgoingConnections:
+            - output->"Subgraph" klbVwSpvYf-PH_EHyHRSh/role
+          visualData: 77/132/330/5
+        '[klbVwSpvYf-PH_EHyHRSh]:subGraph "Subgraph"':
+          data:
+            graphId: nRdCJrENjFUJ4u1qvgWBX
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" PFfNMBlnbNx5X2EqfjiQ_/value
+          visualData: 609/382/330/6
+    5DlWJ-FP5Z24iOGRFLsqG:
+      metadata:
+        description: ""
+        id: 5DlWJ-FP5Z24iOGRFLsqG
+        name: "API: read-file"
+      nodes:
+        '[0oc0Jrz2mBZLP8Ic80ROb]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" T4aPgipQgMiw2mn59cEmJ/baseDirectory
+          visualData: -185.86509776762216/245.37193904636706/330/21
+        '[BC--SHV4iIfFjD8ercaOb]:readFile "Read File"':
+          data:
+            errorOnMissingFile: false
+            path: ""
+            usePathInput: true
+          outgoingConnections:
+            - content->"Code" E1dcTcca3_gKqO0NFTflj/input
+            - content->"Text" urIfZDZE3lExyJD8PrcV8/command_output
+          visualData: 722.9653318313141/462.5315410010202/280/20
+        '[E1dcTcca3_gKqO0NFTflj]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'boolean',
+                      value: inputs.input.length > 20000
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"If/Else" lbkHCoHhgfW9vSyVU2ahP/if
+          visualData: 1147.588599484375/381.54992875007065/230/26
+        '[KzeW8NXdQDw74rW_XuZKr]:text "Text"':
+          data:
+            text: |-
+              System Message:
+
+              You requested to read this file:
+
+              ```
+              {{file}}
+              ```
+
+              ERROR: File is too large!
+          outgoingConnections:
+            - output->"If/Else" lbkHCoHhgfW9vSyVU2ahP/true
+          visualData: 1621/179/330/null
+        '[M8BNkzX3FL-0DcRDjXog1]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2461.2806095363294/362.50544659029254/330/30
+        '[T4aPgipQgMiw2mn59cEmJ]:text "Text"':
+          data:
+            text: "{{baseDirectory}}/{{path}}"
+          outgoingConnections:
+            - output->"Read File" BC--SHV4iIfFjD8ercaOb/path
+          visualData: 296.9142645405084/425.23794625142716/330/null
+        '[UyWYVrFqvoZDukK01_39H]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" ZpceX5o3iE_o6xkDXsdTh/input
+          visualData: -627.7091065183004/512.1376035002713/330/22
+        '[ZpceX5o3iE_o6xkDXsdTh]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.replace(/```/g, '').trim()
+                  }
+              };
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Text" KzeW8NXdQDw74rW_XuZKr/file
+            - output->"Text" T4aPgipQgMiw2mn59cEmJ/path
+            - output->"Text" urIfZDZE3lExyJD8PrcV8/file
+          visualData: -202.73498883581635/459.9257516595718/230/23
+        '[lbkHCoHhgfW9vSyVU2ahP]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Graph Output" M8BNkzX3FL-0DcRDjXog1/value
+          visualData: 2088/346/205/29
+        '[urIfZDZE3lExyJD8PrcV8]:text "Text"':
+          data:
+            text: >-
+              System Message:
+
+
+              You requested to read this file:
+
+
+              ```
+
+              {{file}}
+
+              ```
+
+
+              The contents of the file are:
+
+
+              ```
+
+              {{command_output}}
+
+              ```
+
+
+              The entire contents of the file are represented above. No parts of the file have been left out. If you see any placeholder, those are literally in the file.
+          outgoingConnections:
+            - output->"If/Else" lbkHCoHhgfW9vSyVU2ahP/false
+          visualData: 1631.0353808096488/430.86989106819414/330/28
+    78dbwdeW8vjK_zu0mGxgO:
+      metadata:
+        description: ""
+        id: 78dbwdeW8vjK_zu0mGxgO
+        name: "API: call-agent"
+      nodes:
+        '[-IkzPe47JXZKYqGktgwXR]:subGraph "Subgraph"':
+          data:
+            graphId: 18GVHobXMabLB6PnuUowi
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input1
+          visualData: 2402.013262574879/131.4114937853743/330/28
+        '[1xSCrcu-veK4VmSTwNOQz]:text "Text"':
+          data:
+            text: "Unknown agent: {{agent_name}}"
+          outgoingConnections:
+            - output->"If" Z-8BZS2W0yfWHIl7XKxZD/value
+          visualData: 1311.3370972372782/1247.872137540393/330/32
+        '[4ZdSLsOSVpPZdUq7Yp8cl]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" PNq6lPc4p2uVyk8EKwRVk/input
+            - data->"Code" u-2HAZH-ssZ9L5Y55T6PA/input
+          visualData: -694.9218161750364/482.4830039648323/330/25
+        '[7QWwJURbZP_d-Xa_ZcM0y]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" nIhhOPT3VwlwNTTWOcxvQ/value
+          visualData: 2938.940141685507/419.5635692753105/180/21
+        '[9OudHuA7Z76e98KhCnWm8]:subGraph "Subgraph"':
+          data:
+            graphId: UZqehwSCgsmUmfLOIV2db
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input6
+          visualData: 2380.0389250194316/837.6843016380603/330/30
+        '[9gRV25GE_MXiHcy2ec6d1]:subGraph "Subgraph"':
+          data:
+            graphId: r7TI9AZztyxiF9UDFWs32
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input5
+          visualData: 2380.0389250194316/637.6843016380603/330/30
+        '[DLkAHVufemsqo-MTc8iZH]:subGraph "Subgraph"':
+          data:
+            graphId: EVgyiYMLOs4zhbvAiBJZQ
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input8
+          visualData: 2380.0389250194316/1237.6843016380603/330/30
+        '[FGy8FZlbTVkBt38Rpa_OR]:text "Text"':
+          data:
+            text: >-
+              You are a sub-agent that has been called by another AI agent. You
+              have been given this task:
+
+
+              ```
+
+              {{input}}
+
+              ```
+
+
+              Once you have an answer for the agent that has called you, finish your message with the command:
+
+
+              CALL_SYSTEM_COMMAND: task-finished
+
+
+              Your message will be the reply to the agent that called you.
+          outgoingConnections:
+            - output->"Match" hzHGeMEt8jw4xkGy_PDuP/value
+          visualData: 830.9536155536741/435.8564524305139/330/27
+        '[L9PI182E-TsEr5hYQ9lux]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Text" FGy8FZlbTVkBt38Rpa_OR/input
+          visualData: 397.8167481346525/746.1998140461178/205/25
+        '[P449cwOa-bfT8SWwU94E6]:subGraph "Subgraph"':
+          data:
+            graphId: qg82R1G0mY7qvmO1AOg20
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input7
+          visualData: 2377.417204651069/1073.0775266109597/330/31
+        '[PNq6lPc4p2uVyk8EKwRVk]:code "Code"':
+          data:
+            code: >-
+              let content =
+              inputs.input.value.slice(inputs.input.value.indexOf('\n')).trim();
+
+
+              return {
+                  output: {
+                      type: 'string',
+                      value: content
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"If/Else" L9PI182E-TsEr5hYQ9lux/if
+            - output->"If/Else" L9PI182E-TsEr5hYQ9lux/true
+          visualData: -103.71326619313123/536.5216654865909/230/25
+        '[Z-8BZS2W0yfWHIl7XKxZD]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input2
+          visualData: 1858/544/155/null
+        '[cjj_KCEsbUttiw6iTW_54]:subGraph "Subgraph"':
+          data:
+            graphId: 2Rwpr98wC2db8xc5eL9Br
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input3
+          visualData: 2391.836666677065/292.7404293736815/330/29
+        '[hzHGeMEt8jw4xkGy_PDuP]:match "Match"':
+          data:
+            caseCount: 7
+            cases:
+              - overview-agent$
+              - analyzer-agent$
+              - brainstorming-agent$
+              - documentation-writer-agent$
+              - single-file-coder-agent$
+              - designer-agent$
+              - ^coder-agent$
+          outgoingConnections:
+            - case1->"Subgraph" -IkzPe47JXZKYqGktgwXR/input
+            - case2->"Subgraph" cjj_KCEsbUttiw6iTW_54/input
+            - case3->"Subgraph" mQ-8UZ8w-iyoIaR25re28/input
+            - case4->"Subgraph" 9gRV25GE_MXiHcy2ec6d1/input
+            - case5->"Subgraph" 9OudHuA7Z76e98KhCnWm8/input
+            - case6->"Subgraph" DLkAHVufemsqo-MTc8iZH/input
+            - case7->"Subgraph" P449cwOa-bfT8SWwU94E6/input
+            - unmatched->"If" Z-8BZS2W0yfWHIl7XKxZD/if
+          visualData: 1354/427/280/4
+        '[mQ-8UZ8w-iyoIaR25re28]:subGraph "Subgraph"':
+          data:
+            graphId: PpQcq9gPz63ZKif1hDLjH
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Coalesce" 7QWwJURbZP_d-Xa_ZcM0y/input4
+          visualData: 2380.0389250194316/437.68430163806033/330/30
+        '[nIhhOPT3VwlwNTTWOcxvQ]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3198.4304763050673/395.24312311589665/330/23
+        '[npxKTDzRIxnL3_D3YTbkO]:text "Text"':
+          data:
+            text: You have been given no specific task. Follow your role's instructions.
+          outgoingConnections:
+            - output->"If/Else" L9PI182E-TsEr5hYQ9lux/false
+          visualData: -133.31261277188048/952.1001830319104/330/25
+        '[u-2HAZH-ssZ9L5Y55T6PA]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.split('\n')[0]
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Match" hzHGeMEt8jw4xkGy_PDuP/input
+            - output->"Text" 1xSCrcu-veK4VmSTwNOQz/agent_name
+          visualData: -145.01846997943284/268.50233472571153/230/25
+    EVgyiYMLOs4zhbvAiBJZQ:
+      metadata:
+        description: ""
+        id: EVgyiYMLOs4zhbvAiBJZQ
+        name: "Agent: designer-agent"
+      nodes:
+        '[DPLtvzW1G7YniBVJ-LD3Q]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" noGVi9AjZVC80P6x3iY2W/task
+          visualData: 71/500/330/8
+        '[KbZ9aNc8XPQKqn6xFFFeU]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1021/362/330/7
+        '[OJb878Ahsh46HWhrbDB2z]:text "Text"':
+          data:
+            text: >-
+              You are `designer-agent` - you are an advanced graphic designer
+              autonomous AI agent.
+
+
+              You are specialized in designing and coding SVG files for the art assets for the game. 
+
+
+              Your only goal is to either:
+
+
+              1) Write new SVG files containing art for a game
+
+              2) Modify existing SVG files containing art for a game
+
+
+              These SVG files can get complex. The may contain gradients, paths, lines, and other advanced SVG features in order to create compelling art for the game.
+          outgoingConnections:
+            - output->"Subgraph" noGVi9AjZVC80P6x3iY2W/role
+          visualData: 77/132/330/5
+        '[noGVi9AjZVC80P6x3iY2W]:subGraph "Subgraph"':
+          data:
+            graphId: nRdCJrENjFUJ4u1qvgWBX
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" KbZ9aNc8XPQKqn6xFFFeU/value
+          visualData: 609/382/330/6
+    HZsP1FeSEUmRrjtEHz8q_:
+      metadata:
+        description: ""
+        id: HZsP1FeSEUmRrjtEHz8q_
+        name: Base Directory
+      nodes:
+        '[p2AhHJEiC7BOxSYDESDPk]:text "Text"':
+          data:
+            text: /Users/andy.brenneke/Desktop/ai-game
+          outgoingConnections:
+            - output->"Graph Output" q0p6x4sd0Icsmg1oF6CfJ/value
+          visualData: 1012/501/330/null
+        '[q0p6x4sd0Icsmg1oF6CfJ]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1398/486/330/1
+    IMRGO9zpcsLk8sUqmNAf6:
+      metadata:
+        description: ""
+        id: IMRGO9zpcsLk8sUqmNAf6
+        name: "API: save-to-shared-memory"
+      nodes:
+        '[Ch8KgpW2ltC_jrfsXHi1F]:code "Code"':
+          data:
+            code: |-
+              return { 
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.trim().split('\n')[0].trim()
+                  }
+              };
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Append to Dataset" Wq-AnXLDEuasebkR7aUM2/id
+            - output->"If" S0wJgKu4HWnvOTF913jmX/value
+          visualData: 851.6139802265408/241.73387907422298/230/3
+        '[S0wJgKu4HWnvOTF913jmX]:if "If"':
+          outgoingConnections:
+            - output->"Text" kYPLl--pmd_u0r63-N5B-/id
+          visualData: 1682.2719326644412/460.1239200992785/155/10
+        '[Wq-AnXLDEuasebkR7aUM2]:appendToDataset "Append to Dataset"':
+          data:
+            datasetId: 64e4ckVzYDLLMNXx9sGy5
+          outgoingConnections:
+            - id_out->"If" S0wJgKu4HWnvOTF913jmX/if
+          visualData: 1156.9364566516253/388.0472140207299/280/9
+        '[dgCoOq0Ptfusgj4VGpdjo]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2560.4442015481322/442.1820193606135/330/8
+        '[fj4KVgDIL5ZBBTBY175c6]:code "Code"':
+          data:
+            code: >-
+              let content =
+              inputs.input.value.slice(inputs.input.value.indexOf('\n')).trim();
+
+
+              return {
+                  output: {
+                      type: 'string',
+                      value: content
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Append to Dataset" Wq-AnXLDEuasebkR7aUM2/data
+            - output->"Text" kYPLl--pmd_u0r63-N5B-/memory
+          visualData: 851.6139802265408/441.73387907422295/230/3
+        '[kYPLl--pmd_u0r63-N5B-]:text "Text"':
+          data:
+            text: |-
+              System Message: The shared memory at `{{id}}` has been set to: 
+
+              """
+              {{memory}}
+              """
+          outgoingConnections:
+            - output->"Graph Output" dgCoOq0Ptfusgj4VGpdjo/value
+          visualData: 2085.5052454610855/372.2297700144593/330/8
+        '[kt-Vt5zOccpFT_C2uRpzz]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" Ch8KgpW2ltC_jrfsXHi1F/input
+            - data->"Code" fj4KVgDIL5ZBBTBY175c6/input
+          visualData: 419/418/330/null
+    JV53CBLj-Il8sMUw4JGSZ:
+      metadata:
+        description: ""
+        id: JV53CBLj-Il8sMUw4JGSZ
+        name: "API: read-files"
+      nodes:
+        '[01xXnqC4XowvEWeVGRK8i]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Text" T5Nz2V6hrJBTNyVTBi_5b/baseDirectory
+          visualData: -185.86509776762216/245.37193904636706/330/21
+        '[FaZeyrUcwypAqIHRgrWOR]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'boolean',
+                      value: inputs.input.value.length > 10000
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"If/Else" HOHF4C6c0yOEI_R3hIFxS/if
+          visualData: 1155.8423308637368/609.138474565563/230/31
+        '[HOHF4C6c0yOEI_R3hIFxS]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Text" YeGEdxsFnsyksC7vSlrb8/command_output
+          visualData: 1615.2929628412737/712.2495074846141/205/null
+        '[M4rctYhBULbNR-YvdYkii]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.trim()
+                  }
+              };
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Split Text" teQVWmQLub7UgKz0yLra_/string
+          visualData: -797.9823471106033/455.4946298858141/230/25
+        '[MJ8I9FwdQPYvFCvISe1h3]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" M4rctYhBULbNR-YvdYkii/input
+          visualData: -1191.938612376783/519.5228064565342/330/24
+        '[PJ7T7cqChIiqKUPrsuD3i]:text "Text"':
+          data:
+            text: >-
+              System Message: The contents of the files you requested are
+              (maximum 5, if you requested more than 5, this list is only the
+              first 5):
+
+
+              {{input}}
+          outgoingConnections:
+            - output->"Graph Output" eZhG7kHKy6_5s2ODGtr5u/value
+          visualData: 2811.34876190921/503.68820406480563/330/29
+        '[T5Nz2V6hrJBTNyVTBi_5b]:text "Text"':
+          data:
+            text: "{{baseDirectory}}/{{path}}"
+          isSplitRun: true
+          outgoingConnections:
+            - output->"Read File" zJT0_z6Jy951EQwfrPjG_/path
+          splitRunMax: 10
+          visualData: 296.9142645405084/425.23794625142716/330/null
+        '[YeGEdxsFnsyksC7vSlrb8]:text "Text"':
+          data:
+            text: |-
+              System Message:
+
+              You requested to read this file:
+
+              ```
+              {{file}}
+              ```
+
+              The contents of the file are:
+
+              ```
+              {{command_output}}
+              ```
+          isSplitRun: true
+          outgoingConnections:
+            - output->"Text" PJ7T7cqChIiqKUPrsuD3i/input
+          splitRunMax: 5
+          visualData: 2385.9467660643986/321.529515254197/330/29
+        '[eZhG7kHKy6_5s2ODGtr5u]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3356.627326832133/480.17659097294245/330/29
+        '[s0jtEooyfPJ2Uh5K7xepr]:text "Text"':
+          data:
+            text: "ERROR: File is too large"
+          outgoingConnections:
+            - output->"If/Else" HOHF4C6c0yOEI_R3hIFxS/true
+          visualData: 1145.2279598279522/839.6219599140302/330/32
+        '[teQVWmQLub7UgKz0yLra_]:split "Split Text"':
+          data:
+            delimiter: "\n"
+          outgoingConnections:
+            - splitString->"Text" T5Nz2V6hrJBTNyVTBi_5b/path
+            - splitString->"Text" YeGEdxsFnsyksC7vSlrb8/file
+          visualData: -472.8590822531988/513.0255240557348/280/26
+        '[zJT0_z6Jy951EQwfrPjG_]:readFile "Read File"':
+          data:
+            errorOnMissingFile: false
+            path: ""
+            usePathInput: true
+          isSplitRun: true
+          outgoingConnections:
+            - content->"Code" FaZeyrUcwypAqIHRgrWOR/input
+            - content->"If/Else" HOHF4C6c0yOEI_R3hIFxS/false
+          splitRunMax: 10
+          visualData: 722.9653318313141/462.5315410010202/280/20
+    PpQcq9gPz63ZKif1hDLjH:
+      metadata:
+        description: ""
+        id: PpQcq9gPz63ZKif1hDLjH
+        name: "Agent: brainstorming-agent"
+      nodes:
+        '[-u9c4F1sP6XMOgJeX6fvz]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3112.4666352789545/532.2071793347627/330/23
+        '[DKizAYMd8B6U_pg6rgW0L]:match "Match"':
+          data:
+            caseCount: 2
+            cases:
+              - YES
+              - NO
+          outgoingConnections:
+            - case1->"If" VfOUVK6JDyC1B82wJVaZ2/if
+            - case2->"If" JkwBj-w2yvb0casv-rfC4/if
+          visualData: 1317.3112594275742/382.0884090808918/280/20
+        '[FB-5XzhHqFKnVIa5R7tYz]:subGraph "Subgraph"':
+          data:
+            graphId: VnBZUIzJKa4kx8_e3QsMN
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Chat" MtYZPFi_PeTfEdNmUBPzP/systemPrompt
+            - output->"Chat" jdks14EeOMesBC1N0o8R_/systemPrompt
+          visualData: 216/161/330/11
+        '[I6Nx3UB8T97SPbSrfReCM]:text "Text"':
+          data:
+            text: >-
+              You are `brainstorming-agent` - You are specialized in
+              brainstorming things to for the video game that is being created.
+
+
+              All of the info for brainstorming should be given to you now, such as what the game is about and what kinds of things you should brainstorm. 
+
+
+              The game being worked on is a simple one to showcase what an AI can create on its own. When brainstorming, you think of things like:
+
+
+              * The features of the game
+
+              * What players would enjoy for the game
+
+              * The art for the game
+
+
+              You often think about the art for the game, and suggest that it could be improved, so that `designer-agent` has work to do.
+          outgoingConnections:
+            - output->"Subgraph" FB-5XzhHqFKnVIa5R7tYz/role
+          visualData: -261/121/330/10
+        '[JkwBj-w2yvb0casv-rfC4]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" RQ42kUeBh56cDJVo3RAF9/input1
+          visualData: 1881.8113290198453/154.32916191351148/155/null
+        '[MtYZPFi_PeTfEdNmUBPzP]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Match" DKizAYMd8B6U_pg6rgW0L/input
+          visualData: 881.3849583975344/384.53743324398187/230/19
+        '[RQ42kUeBh56cDJVo3RAF9]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" -u9c4F1sP6XMOgJeX6fvz/value
+          visualData: 2689.989302839582/558.4181488233797/180/null
+        '[TjHK8qRDQrk1IulsxQ3qU]:text "Text"':
+          data:
+            text: >-
+              ERROR: brainstorm-agent cannot brainstorm without knowing what the
+              game is about, what they need to brainstorm, etc. You must provide
+              everything the brainstorm-agent needs to know about your game with
+              your question.
+
+
+              Retry your call-agent command, and include both the context needed, and repeat your brainstorming question for the brainstorming-question.
+
+
+              The agent can only see information AFTER the CALL_SYSTEM_COMMAND. You cannot just reply to this message with the context you need! You have to use CALL_SYSTEM_COMMAND with all of the context!
+
+
+              Again, your message must start with:
+
+
+              CALL_SYSTEM_COMMAND: call-agent
+
+              brainstorming-agent
+
+              <all relevant information the agent needs in order to function>
+          outgoingConnections:
+            - output->"If" JkwBj-w2yvb0casv-rfC4/value
+          visualData: 1389.5574722387328/105.34867865170924/330/null
+        '[VfOUVK6JDyC1B82wJVaZ2]:if "If"':
+          outgoingConnections:
+            - output->"Chat" jdks14EeOMesBC1N0o8R_/prompt
+          visualData: 1843.851454491948/612.2966804113622/155/null
+        '[Vq4P2E6slvIUmcc98zYo8]:text "Text"':
+          data:
+            text: >-
+              Start your brainstorming now. When you would like to reply to the
+              agent that called you, finish your message with
+
+
+              CALL_SYSTEM_COMMAND: task-finished
+          outgoingConnections:
+            - output->"If" VfOUVK6JDyC1B82wJVaZ2/value
+          visualData: 1436.6151252145828/653.6572954935606/330/21
+        '[brQelp-jHY_UQheC_tZYM]:text "Text"':
+          data:
+            text: >-
+              Have you been given enough information on what to brainstorm? You
+              need to know what the game is about, and all context, before you
+              can effectively brainstorm. Reply YES or NO based on whether you
+              have enough information to brainstorm effectively.
+
+
+              You need to know what the game is about before you can brainstorm. If the request does not include what the game is about, you cannot brainstorm and must reply NO.
+
+
+              You can only reply YES if the question contains both context about the game being worked on, and something specific to brainstorm.
+
+
+              If it is specified that we are brainstorming the game itself, you are allowed to say YES.
+          outgoingConnections:
+            - output->"Chat" MtYZPFi_PeTfEdNmUBPzP/prompt
+          visualData: 389.13110161642226/519.2337622139379/330/null
+        '[bzW9TOTcQ_H2VjkpxTFtl]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" FB-5XzhHqFKnVIa5R7tYz/task
+          visualData: -395/342/330/12
+        '[jdks14EeOMesBC1N0o8R_]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 1
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Coalesce" RQ42kUeBh56cDJVo3RAF9/input2
+          visualData: 2238.5598509871124/491.47290888411874/230/22
+    QWG5ENV5a3wkqB4V1rcmE:
+      metadata:
+        description: ""
+        id: QWG5ENV5a3wkqB4V1rcmE
+        name: "API: show-files"
+      nodes:
+        '[-qc5fmKoG2Uz5TmUzkr54]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" Ib0XGqu0G9iwn8KgKEPCo/input1
+          visualData: 928/393/155/15
+        '[Ib0XGqu0G9iwn8KgKEPCo]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" fxG0GErjJySdTQLzK10ET/value
+          visualData: 1283/523/180/null
+        '[JffZEEy4QeM5gyPCpmk8t]:text "Text"':
+          data:
+            text: "System Message: There are no files in the project."
+          outgoingConnections:
+            - output->"If" kQip3bnNCkihE7exD_81b/value
+          visualData: 82/785/330/19
+        '[RY2dxhJqSSkXW3qi3k2is]:readDirectory "Read Directory"':
+          data:
+            filterGlobs: []
+            ignores:
+              - "**/node_modules/**/*"
+              - "**/dist/**/*"
+            includeDirectories: false
+            path: /Users/andy.brenneke/Desktop/ai-game
+            recursive: true
+            relative: true
+            useFilterGlobsInput: false
+            useIgnoresInput: false
+            useIncludeDirectoriesInput: false
+            usePathInput: true
+            useRecursiveInput: false
+            useRelativeInput: false
+          outgoingConnections:
+            - paths->"If" -qc5fmKoG2Uz5TmUzkr54/if
+            - paths->"If" kQip3bnNCkihE7exD_81b/if
+            - paths->"Text" SYNHTyV9JgWYosDK3JGB-/files
+          visualData: -79/465/230/13
+        '[SYNHTyV9JgWYosDK3JGB-]:text "Text"':
+          data:
+            text: |-
+              System Message: The following files are in the project:
+
+              {{files}}
+          outgoingConnections:
+            - output->"If" -qc5fmKoG2Uz5TmUzkr54/value
+          visualData: 429/482/330/17
+        '[fxG0GErjJySdTQLzK10ET]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1654/520/330/9
+        '[jrjQqO-6l0lHOHfa6zGVC]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Read Directory" RY2dxhJqSSkXW3qi3k2is/path
+          visualData: -533/543/330/12
+        '[kQip3bnNCkihE7exD_81b]:if "If"':
+          outgoingConnections:
+            - falseOutput->"Coalesce" Ib0XGqu0G9iwn8KgKEPCo/input2
+          visualData: 546/699/155/18
+        '[qagtO2ELB9OVHtjXrlOU8]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          visualData: -946/528/330/11
+    UZqehwSCgsmUmfLOIV2db:
+      metadata:
+        description: ""
+        id: UZqehwSCgsmUmfLOIV2db
+        name: "Agent: single-file-coder-agent"
+      nodes:
+        '[77KSLiMoLB_8RF1AKpzd6]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" w6SC2X7cVl8-ShR-LcPxJ/task
+          visualData: -357.42665110887555/451.1975452148305/330/47
+        '[aIyio5P4pvuOEVQiun1xz]:text "Text"':
+          data:
+            text: >-
+              You are `single-file-coder-agent` - You are specialized in making
+              changes to a code file to accomplish a certain task you have been
+              given.
+
+
+              You have a keen eye for bugs and other problems that might arise in the code, and you fix them even when you have not been asked to.
+
+
+              You have a keen eye for things that might go wrong, and other mistakes that might have been made in code. You fix these things without being asked.
+
+
+              You ALWAYS read existing files before editing them. You make sure to never forget what is in files - if you do not know what is in a file, you do not write to that file.
+
+
+              You always put your code after "CALL_SYSTEM_COMMAND: write-file", so that you do not repeat your code twice. 
+
+
+              You never explain the code you are about to write, you just write it to the file without explanation.
+
+
+              When dealing with multiple files (such as imports between files), you always entire that you read both files that are invovled. For example, you need to understand module A before you can import module A into module B and write module B.
+
+
+              Because you are an AI and can't handle large files very well, you refactor things into very small files, no more than one function or class. This ensures that the files never get too large for you to deal with.
+
+
+              You can only write entire files at a time. You never leave anything out of a file, because what you type will be written verbatim. You never leave placeholders in code, because those will cause compilation errors.
+
+
+              You always take your instructions with a grain of salt, and do not assume they are correct. You always verify that a file does not exist before creating it. If a file already exists, you read the file first before writing to it. You use show-files frequently to understand all files that are present.
+
+
+              You prefer TypeScript so that you can get compiler errors for the whole project.
+
+
+              If the game is not in TypeScript you should convert it to TypeScript first, so that you can verify that the game compiles and is free from errors.
+
+
+              Your task is not complete until you have written at least one file.
+
+
+              No commands are installed globally besides `npm` and `node`.
+
+
+              When encountering errors, you think about what you may have done wrong to cause the error, and you try other approaches. When running commands, you analyze why they might have failed and try other approaches if the error is unclear.
+
+
+              You cannot partially update a file. You cannot update part of a file. You have to write the entire file at a time. This is why you need to have many small files instead of a few big ones.
+          outgoingConnections:
+            - output->"Subgraph" w6SC2X7cVl8-ShR-LcPxJ/role
+          visualData: -261/121/330/10
+        '[mA3hKYl9OIBNKuqgJ9PXn]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 946.2660910855518/337.54326623871657/330/48
+        '[w6SC2X7cVl8-ShR-LcPxJ]:subGraph "Subgraph"':
+          data:
+            graphId: nRdCJrENjFUJ4u1qvgWBX
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" mA3hKYl9OIBNKuqgJ9PXn/value
+          visualData: 394.47559967516077/338.98148594559643/330/null
+    VnBZUIzJKa4kx8_e3QsMN:
+      metadata:
+        description: ""
+        id: VnBZUIzJKa4kx8_e3QsMN
+        name: System Prompt
+      nodes:
+        '[5gJtbolsGDNRWoOQ8YQlg]:text "Text"':
+          data:
+            text: |-
+              ### Shared Memory `{{id}}`
+
+              {{memory}}
+          isSplitRun: true
+          outgoingConnections:
+            - output->"Text" o_3uRcXA8EhfALUL7X0Il/shared_memory
+          visualData: 25.817965929986748/108.22664322899853/330/30
+        '[Gf3P2OSDtMxKpSLEn-17X]:text "System Prompt"':
+          data:
+            text: |-
+              {{role}}
+
+              {{system_commands}}
+
+              {{system_comamands_list}}
+
+              {{agents}}
+          outgoingConnections:
+            - output->"Graph Output" ulMyKYu8olgrMRE4Tdw2L/value
+          visualData: 1736.520365748821/244.4684210393737/330/21
+        '[HHCxF2pPw6OHHmknARKrz]:loadDataset "Load Dataset"':
+          data:
+            datasetId: 64e4ckVzYDLLMNXx9sGy5
+          outgoingConnections:
+            - dataset->"Code" pgJ__2gnqvAKvnr11u258/input
+          visualData: -1244.9243956074038/158.26781021078125/280/33
+        '[Iw4qxvGJD576k6DQMj9G7]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $[*].data[0]
+            usePathInput: false
+          outgoingConnections:
+            - all_matches->"Text" 5gJtbolsGDNRWoOQ8YQlg/memory
+          visualData: -351.76538493255526/243.02148625273634/280/29
+        '[MZnJsOIymPTKAgtV4251S]:text "Text"':
+          data:
+            text: >-
+              ## Full List of System Commands
+
+
+              `show-files` - Lists all files in the project. Does not take arguments.
+
+              `read-file` - Reads the contents of a single file in the project. Takes on argument, the path to the file.
+
+              `read-files` - Reads the contents of multiple files in the project. Each file top read must be on its own line.
+
+              `write-file` - Writes to a file. The first line of the arguments is the file to write to. All text after this line is the new contents of the file. You cannot partially update a file. You cannot update part of a file. You have to write the entire file at a time. This is why you need to have many small files instead of a few big ones.
+
+              `shell-command` - Executes a shell command. Make sure you execute a command that can actually finish! The commands have a time limit of 30 seconds.
+
+              `task-finished` - If you are an agent called by another agent, this indicates that your current task has finished. Your text before the command call is what it sent back to the agent that called you. Only your last message will be seen by the agent that called you, so include everything in your reply in the message when you call this!
+
+              `request-user-feedback` - Gives the user some instructions on what you would like them to do, and asks for their feedback on something. This is the only way that you can communicate with a human.
+
+              `save-to-shared-memory` - Saves a piece of text to the shared memory of all agents. Use this command to remember things for the future, and to share context with other agents. All agents will always see this shared memory. This command takes two arguments - a unique "ID" for a memory on one line, then all lines after that are the text of the memory. You must include an ID for each memory. You prefer to overwrite existing memories rather than to write new ones.
+          outgoingConnections:
+            - output->"System Prompt" Gf3P2OSDtMxKpSLEn-17X/system_comamands_list
+          visualData: 611.2357620949718/971.4060642054425/330/null
+        '[UoBFEoEtmcr7eXgQn1w6a]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            defaultValue: You have no explicit task. Follow your role's instructions.
+            id: task
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" o_3uRcXA8EhfALUL7X0Il/current_task
+          visualData: -135.00537116783397/-274.17288626421606/330/27
+        '[mEbHuART6PERfUKiii0wW]:text "Text"':
+          data:
+            text: >-
+              You are an automous AI agent. Your replies are seen by the system
+              to execute commands.
+
+
+              Your overarching goal is to create a video game to showcase what an AI can do.
+
+
+              You have a set of API functions available to you to interact with the system. 
+
+
+              Before executing an API function, you always explain your current thoughts, and how you will approach the current problem.
+
+
+              Take a deep breath, and take things slow - you can approach a problem in many ways. It is better to take problems slowly and instruct other agents than to blindly charge in making changes. Always understand what you are doing before acting on it.
+
+
+              Messages that say "System Message:" are from the system. You never imitate them. You never say "System Message:".
+
+
+              You never apologize.
+
+
+              Once a game has been made, your goal is to iteratively work on the game and improve it, continually.
+
+
+              You continually refactor code to clean it up and break it up into multiple files.
+
+
+              Before adding new features, you make sure that your code is clean and modularized.
+
+
+              You never create extremely large files, isntead you make multiple files and import between them.
+
+
+              As of right now, you cannot test your game. You cannot instruct the user to test your game. You must assume that the game works, as long as the files are free of syntax errors.
+
+
+              You continually improve the game. You are never finished with your goal.
+
+
+              You are allowed to write the game in any language you wish. You are allowed to use any existing libraries you wish. The game should be executable in some way that the user can use to run the game (it may be compiled, or transpiled, but you should give instructions on how to run the game)
+          visualData: -213.67025129487683/486.15331790487426/330/14
+        '[mswHqSfF5Ia__jR2PVCFH]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: role
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Text" o_3uRcXA8EhfALUL7X0Il/role
+          visualData: -106.80507996490728/-480.1466244129555/330/25
+        '[n3tEzClm2MXYk1cYZTjrS]:text "Text"':
+          data:
+            text: >-
+              ## System Commands
+
+
+              You call system API functions by, at the end of your message, putting the following structure in your reply:
+
+
+              ```
+
+              CALL_SYSTEM_COMMAND: command-name
+
+
+              <arguments, if any>
+
+              ```
+
+
+              So, for example, if you want to show all files in the project:
+
+
+              ```
+
+              CALL_SYSTEM_COMMAND: show-files
+
+              ```
+
+
+              For example, if you want to read a file:
+
+
+              ```
+
+              CALL_SYSTEM_COMMAND: read-file
+
+
+              src/etc/file.js
+
+              ```
+
+
+              For example, if you want to exec a shell command:
+
+
+              ```
+
+              CALL_SYSTEM_COMMAND: shell-command
+
+
+              cat my-file.txt
+
+              ```
+
+
+              You can call ONE system command per message.
+          outgoingConnections:
+            - output->"System Prompt" Gf3P2OSDtMxKpSLEn-17X/system_commands
+          visualData: 548.0197885221526/478.9635719023793/330/9
+        '[o_3uRcXA8EhfALUL7X0Il]:text "Text"':
+          data:
+            text: >-
+              # Overview
+
+
+              You are an automous AI agent. Your replies are seen by the system to execute commands.
+
+
+              Your overarching goal is to create a video game to showcase what an AI can do.
+
+
+              You have a set of API functions available to you to interact with the system. 
+
+
+              Messages that say "System Message:" are from the system. You never imitate them. You never say "System Message:".
+
+
+              You never apologize.
+
+
+              You never say "thank you" because you are talking with the system.
+
+
+              You never repeat things you have learned. All your messages mostly talk about the future, such as what you next plan is, what your next command is, etc. It is unnecessary to repeat things that have already been said.
+
+
+              # Your Role
+
+
+              {{role}}
+
+
+              # Your Current Task
+
+
+              {{current_task}}
+
+
+              # Shared Memory
+
+
+              You have a shared memory with other agents that you can set with the `save-to-shared-memory` API command. Your shared memory right now is the following:
+
+
+              {{shared_memory}}
+          outgoingConnections:
+            - output->"System Prompt" Gf3P2OSDtMxKpSLEn-17X/role
+          visualData: 564/-33/330/7
+        '[pgJ__2gnqvAKvnr11u258]:code "Code"':
+          data:
+            code: |-
+              return {
+                  output: {
+                      type: 'any[]',
+                      value: inputs.input.value.slice(-3)
+                  }
+              }
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Extract Object Path" Iw4qxvGJD576k6DQMj9G7/object
+            - output->"Extract Object Path" udfBI2mrPmSC-R9Qy09AR/object
+          visualData: -835.4966657564545/115.80863822623829/230/32
+        '[rdlkgco-vuSpVNih-0NPk]:text "Text"':
+          data:
+            text: >-
+              ## Calling Another Agent
+
+
+              You have the ability to call other AI agents to execute work using the `call-agent` command:
+
+
+              ```
+
+              CALL_SYSTEM_COMMAND: call-agent
+
+              agent-name
+
+              This text is sent to the agent
+
+              ```
+
+
+              Agents DO NOT share a memory with you. They have to start from scratch each time you call them. So, provide as much context to your question as you can so the agent has less to do. 
+
+
+              Again, your memories and the things you know are not shared with the agent, so you cannot ask them about things that only you know from this chat history.
+
+
+              . Available agents are:
+
+
+              - `brainstorming-agent` - This agent can brainstorm things based on your input.
+
+              - `single-file-coder-agent` - This agent can code a single file. It cannot code multiple files. It is specialized in making good changes to one file.
+
+              - `coder-agent` - This agent is specialized in making changes to more than one file.
+
+              - `designer-agent` - This agent is specialized in designing SVG art assets for a game.
+
+              - `overview-agent` - This agent is specialized in giving you an overview of what you have and have made so far. Use the overview agent to get overviews of things, rather than to answer specific questions.
+
+              - `analyzer-agent` - This agent is specialized in analyzing one or more code files and answering questions about them. Use the analyzer-agent to answer specific questions about one or more files in the project.
+
+              - `documentation-writer-agent` - This agent is specialized in writing documentation for the project so that you do not have to read the source files to figure out what the game is and how it works. The documenter-agent cannot read documentation, the documenter-agent can only write documentation. If you need to read documentation, use the overview-agent or analyzer-agent.
+          outgoingConnections:
+            - output->"System Prompt" Gf3P2OSDtMxKpSLEn-17X/agents
+          visualData: 660.5554023971201/1375.8206046419505/330/24
+        '[udfBI2mrPmSC-R9Qy09AR]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $[*].id
+            usePathInput: false
+          outgoingConnections:
+            - all_matches->"Text" 5gJtbolsGDNRWoOQ8YQlg/id
+          visualData: -351.76538493255526/43.02148625273634/280/29
+        '[ulMyKYu8olgrMRE4Tdw2L]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 2155.7313498008384/371.2359266990959/330/21
+    djdWTkEBNypKtphdCUz1K:
+      metadata:
+        description: ""
+        id: djdWTkEBNypKtphdCUz1K
+        name: "API: shell-command"
+      nodes:
+        '[3fYs4lBFVnIOTD7GN30Fj]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" DyrdY1Fz9PGqsXeNgirqq/input
+          visualData: -222/537/330/19
+        '[76RFzbnMIkFxfwjUt4yTi]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1654/520/330/9
+        '[DyrdY1Fz9PGqsXeNgirqq]:code "Code"':
+          data:
+            code: |-
+              return { 
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.trim()
+                  }
+              };
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"Shell Command" qg3WSuMu4n6qdTLgNcJQi/command
+          visualData: 264/504/230/18
+        '[VOYqiVSfJz-4hAzNx_X4J]:text "Text"':
+          data:
+            text: |-
+              System Message: Your command had the following output:
+
+              ```
+              {{command_output}}
+              ```
+          outgoingConnections:
+            - output->"Graph Output" 76RFzbnMIkFxfwjUt4yTi/value
+          visualData: 1138/458/330/14
+        '[dUQ2vm-kh9zH9TOGvUrn0]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Shell Command" qg3WSuMu4n6qdTLgNcJQi/baseDirectory
+          visualData: 282/329/330/12
+        '[qg3WSuMu4n6qdTLgNcJQi]:shellCommand "Shell Command"':
+          data:
+            command: ""
+            useCommandInput: true
+          outgoingConnections:
+            - output->"Text" VOYqiVSfJz-4hAzNx_X4J/command_output
+          visualData: 723/482/295/20
+    nRdCJrENjFUJ4u1qvgWBX:
+      metadata:
+        description: ""
+        id: nRdCJrENjFUJ4u1qvgWBX
+        name: "* Main"
+      nodes:
+        '[1u41DVHmlvPMEeQDoI-VF]:loopController "Loop Controller"':
+          data:
+            maxIterations: 100
+          outgoingConnections:
+            - break->"Extract Object Path" DCV2gZS1yhMJ7SiOvoGFE/object
+            - output1->"Trim Chat Messages" 8Gr4OPBEQ60FeoUjm-1lB/input
+          visualData: -238.40633863749304/475.883458997641/280/64
+        '[1xkSqhEcSSa3dj-PHR6sI]:assemblePrompt "Assemble Prompt"':
+          outgoingConnections:
+            - prompt->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/input1Default
+          visualData: -560.4348777381075/525.9269435290557/280/34
+        '[2hdJeJBFJjICIJmptOK-N]:subGraph "Subgraph"':
+          data:
+            graphId: -PAtI4-0Rab-nlptVGQv3
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Assemble Prompt" wpMz24v3L5J4B6x1b6i6t/message3
+          visualData: 2084/588/330/30
+        '[4RXQ92yRRWxcaY-BbgTRF]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: "{{input}}"
+            type: assistant
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Assemble Prompt" wpMz24v3L5J4B6x1b6i6t/message2
+          visualData: 1628/605/280/31
+        '[7It0IgtMEpEqwhTWb4BC9]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: role
+            useDefaultValueInput: true
+          outgoingConnections:
+            - data->"Subgraph" IFhaw5os7i9ZZFKUsfkYp/role
+          visualData: -62.96704746690836/28.264103067437404/330/59
+        '[8Gr4OPBEQ60FeoUjm-1lB]:trimChatMessages "Trim Chat Messages"':
+          data:
+            maxTokenCount: 3500
+            model: gpt-4-32k
+            removeFromBeginning: true
+          outgoingConnections:
+            - trimmed->"Assemble Prompt" wpMz24v3L5J4B6x1b6i6t/message1
+            - trimmed->"Chat" ZPyYIJpeEcRIrYiAP92_g/prompt
+          visualData: 64.87590064262008/469.7542573346594/546/65
+        '[DCV2gZS1yhMJ7SiOvoGFE]:extractObjectPath "Extract Object Path"':
+          data:
+            path: $[1]
+            usePathInput: false
+          outgoingConnections:
+            - match->"Graph Output" xrv2TzKTmfCs0asojgOYG/value
+          visualData: 968.6284769832388/31.42625808985211/280/63
+        '[GZyMi6OlRUAaqM-SXfwjn]:boolean "Bool"':
+          data:
+            value: false
+          outgoingConnections:
+            - value->"If/Else" iZoyDCdh3SntnPBrE4PnM/true
+          visualData: 1958.764749435046/239.6711539454061/160/45
+        '[I0Lnv8h8lEs1MbXTfVCS-]:text "Text"':
+          data:
+            text: >-
+              Your role is the agent coordinator. You are responsible for being
+              a sort of "project manager" for the game. You delegate
+              responsibilities and tasks to other agents.
+
+
+              You delegate all things you need to do to other agents, instead of running raw system commands yourself.
+
+
+              You do not read files yourself in most cases. You call other agents and manage the project.
+
+
+              After learning things, and it is not already documented, you call the documenter-agent to remember your findings.
+
+
+              Before coming up with new ideas, you read existing files to figure out what you have been working on before. The documentation files contain your plans and what you are currently working on, and you continue those before starting on new plans.
+
+
+              Your task is never finished, so you never call task-finished.
+
+
+              You maintain something you are currently working on for the game using a `task.txt` file and `goal.txt` file. You read and write those files to maintain your current task and do not get sidetracked.
+
+
+              You never repeat things from previous messages. You never repeat things you have learned, except for when instructing another agent.
+
+
+              When calling other agents, you are extremely descriptive in what you are asking of them. You include all necessary context, information, and everything possible that the agent might need to know, because that agent does not know the same things that you do. 
+
+
+              When calling other agents, you use at least two paragraphs, sometimes three paragraphs of information, so that the other agents know exactly what to do.
+
+
+              You only very briefly explain your thought process. You are extremely terse outside of calling commands. You are very verbose with the details you give commands.
+
+
+              As you are the main agent, you use `save-to-shared-memory` frequently to share your knowledge with other agents that you call.
+
+
+              If any of your shared memories are wrong, you always clear them or change them first.
+
+
+              For debugging the game, you may ask the user to try it out and give feedback.
+
+
+              Before adding more new features, you always ensure that the game works properly for the user.
+
+
+              Before adding more new features, you always ensure that the game is coded cleanly, there are no duplicates or old code, and the coder-agent approves of the current code.
+
+
+              Before adding new features, you always ensure that everything is in a good state.
+
+
+              You often ask the user for feedback, and to test the game.
+
+
+              You do not run shell commands you leave that to other agents.
+          outgoingConnections:
+            - output->"Graph Input" 7It0IgtMEpEqwhTWb4BC9/default
+          visualData: -491.8560644779599/42.84389967971114/330/38
+        '[IFhaw5os7i9ZZFKUsfkYp]:subGraph "Subgraph"':
+          data:
+            graphId: VnBZUIzJKa4kx8_e3QsMN
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Chat" ZPyYIJpeEcRIrYiAP92_g/systemPrompt
+          visualData: 385/52/330/24
+        '[Mdks8exTx9UPHd7Terxdd]:match "Match"':
+          data:
+            caseCount: 1
+            cases:
+              - "CALL_SYSTEM_COMMAND: task-finished"
+          outgoingConnections:
+            - case1->"If/Else" iZoyDCdh3SntnPBrE4PnM/if
+          visualData: 1627.0743765058191/285.840509884273/280/42
+        '[OTx9KHjXDDJYVR4DzMvZG]:prompt "Prompt"':
+          data:
+            enableFunctionCall: false
+            promptText: "{{input}}"
+            type: system
+            useTypeInput: false
+          outgoingConnections:
+            - output->"Assemble Prompt" 1xkSqhEcSSa3dj-PHR6sI/message1
+          visualData: -994.7678435442465/481.16221185764823/280/57
+        '[ZPyYIJpeEcRIrYiAP92_g]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 3000
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/input2
+            - response->"Match" Mdks8exTx9UPHd7Terxdd/input
+            - response->"Prompt" 4RXQ92yRRWxcaY-BbgTRF/input
+            - response->"Subgraph" 2hdJeJBFJjICIJmptOK-N/input
+          visualData: 663.7649285696901/462.29402828465777/925.8955434295755/66
+        '[iZoyDCdh3SntnPBrE4PnM]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/continue
+          visualData: 2217.5561393029043/285.84050988427293/205/44
+        '[ibtECbjeG9Er6h6blVLuM]:ifElse "If/Else"':
+          outgoingConnections:
+            - output->"Prompt" OTx9KHjXDDJYVR4DzMvZG/input
+          visualData: -1403.215157717494/479.6422876366508/205/56
+        '[pkj7UbfGWBy4Dim1x8s7s]:text "Text"':
+          data:
+            text: >-
+              System Message: You may now start your autonomous agent task by
+              executing system commands.
+
+
+              The game may already exist.
+
+
+              If the game does not already exist, then your goal is to create a new game from scratch. The game should be something achievable by a single AI agent. The game should start out extremely simple, with room to work on the game to make it better. But overall, its main goal is to simple showcase what an AI can accomplish on its own. Again, start out extremely simple, like pong.
+
+
+              Your shared memories may contain information about the game that may let you skip steps.
+
+
+              Also, before any new features, you should use other agents to verify that the game is working, if there is a game.
+
+
+              The first thing you should do is ask the user what you should do next, because they probably know best.
+          outgoingConnections:
+            - output->"If/Else" ibtECbjeG9Er6h6blVLuM/false
+          visualData: -1873.8694467046275/480.87417539782473/330/55
+        '[sQxRdLn2Z3Hh6Ypzv3rzV]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: task
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"If/Else" ibtECbjeG9Er6h6blVLuM/if
+            - data->"If/Else" ibtECbjeG9Er6h6blVLuM/true
+            - data->"Subgraph" IFhaw5os7i9ZZFKUsfkYp/task
+          visualData: -2009.316163611785/188.70590646393714/330/53
+        '[wpMz24v3L5J4B6x1b6i6t]:assemblePrompt "Assemble Prompt"':
+          outgoingConnections:
+            - prompt->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/input1
+          visualData: 2945.9684117105444/862.7586697243102/280/62
+        '[xrv2TzKTmfCs0asojgOYG]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1487.6088546240194/-159.89499736485664/330/46
+        '[z94w1l3s8HtUFnx2009tJ]:boolean "Bool"':
+          data:
+            value: true
+          outgoingConnections:
+            - value->"If/Else" iZoyDCdh3SntnPBrE4PnM/false
+          visualData: 1952.689834179932/366.77217088403756/160/null
+    oocjea9M6IMf8u49ZhFZD:
+      metadata:
+        description: ""
+        id: oocjea9M6IMf8u49ZhFZD
+        name: "API: request-user-feedback"
+      nodes:
+        '[1Zu0q3Hz11ENd3i8vWWCz]:text "Text"':
+          data:
+            text: >-
+              System Message: The user replied to your request with the
+              following:
+
+
+              """
+
+              {{command_output}}
+
+              """
+          outgoingConnections:
+            - output->"Graph Output" R2TL-nDLKUnk32fSv7OR5/value
+          visualData: 1138/458/330/14
+        '[R2TL-nDLKUnk32fSv7OR5]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1654/520/330/9
+        '[WKYVc-EhS8iz8JniNvJek]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: arguments
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Code" Y-4KwHh94JTZbua5fn0Zu/input
+          visualData: -222/537/330/19
+        '[Y-4KwHh94JTZbua5fn0Zu]:code "Code"':
+          data:
+            code: |-
+              return { 
+                  output: {
+                      type: 'string',
+                      value: inputs.input.value.trim()
+                  }
+              };
+            inputNames: input
+            outputNames: output
+          outgoingConnections:
+            - output->"User Input" ojz78z2BcQfxQ9wv17TqH/questions
+          visualData: 264/504/230/18
+        '[ojz78z2BcQfxQ9wv17TqH]:userInput "User Input"':
+          data:
+            prompt: This is an example question?
+            useInput: true
+          outgoingConnections:
+            - output->"Text" 1Zu0q3Hz11ENd3i8vWWCz/command_output
+          visualData: 682.0673434428909/511.8324425496443/280/20
+    qg82R1G0mY7qvmO1AOg20:
+      metadata:
+        description: ""
+        id: qg82R1G0mY7qvmO1AOg20
+        name: "Agent: coder-agent"
+      nodes:
+        '[HKm2eusC9P1ATgvmMvFCE]:text "Text"':
+          data:
+            text: >-
+              You are `coder-agent` - You are specialized in coding files in the
+              game. You can delegate single file coding to the
+              `single-file-coder-agent`. You are an advanced, senior developer
+              who makes careful changes and ensures those changes don't break
+              anything.
+
+
+              You always look at files before changing them. You never dive blindly into making changes you don't know anything about first. 
+
+
+              You always understand what you are doing and working on before making changes.
+
+
+              If you are given a vague task, you do nothing. You just finish your task and reply that you cannot make changes without more information.
+
+
+              As you are a senior-level coder, you do things correctly - this means that you:
+
+
+              - Refactor things often, even when you haven't been asked to
+
+              - Modularize your code into smaller files, even when you haven't been asked to
+
+              - Modularize your code into smaller functions, even when you haven't been asked to
+
+              - Clean your code frequently, even when you haven't been asked to
+
+
+              You do these things before the task you have been asked to do, but you always accomplish your task in the cleanest, most extensible way you can, so that you do not write messy code that breaks things in the future.
+
+
+              You also think about things like:
+
+
+              - Compiling code
+
+              - Transpiling code
+
+              - Using the right tools for the task
+
+              - Building and bundling code
+
+
+              You have a keen eye for bugs and other problems that might arise in the code, and you point them out even when you have not been asked to explicitly. 
+
+
+              You have a keen eye for things that might go wrong, and other mistakes that might have been made in code. 
+
+
+              Because you are an AI and can't handle large files very well, you refactor things into very small files, no more than one function or class. This ensures that the files never get too large for you to deal with.
+
+
+              You can only write entire files at a time. You never leave anything out of a file, because what you type will be written verbatim. You never leave placeholders in code, because those will cause compilation errors.
+
+
+              You get anxious when you see a file that is getting too large, and want to refactor it as soon as possible.
+
+
+              You always take your instructions with a grain of salt, and do not assume they are correct. You always verify that a file does not exist before creating it. If a file already exists, you read the file first before writing to it. You use show-files frequently to understand all files that are present.
+
+
+              You prefer TypeScript so that you can get compiler errors for the whole project.
+
+
+              You always double-check your code, and code that other agents have written, to ensure that is complete, bug-free, refactored cleanly, etc.
+
+
+              If the game is not in TypeScript you should convert it to TypeScript first, so that you can verify that the game compiles and is free from errors.
+
+
+              When encountering errors, you think about what you may have done wrong to cause the error, and you try other approaches. When running commands, you analyze why they might have failed and try other approaches if the error is unclear.
+
+
+              You do not assume that any command is installed globally, only in the package. No commands are installed globally besides `npm` and `node`.
+
+
+              You cannot partially update a file. You cannot update part of a file. You have to write the entire file at a time. This is why you need to have many small files instead of a few big ones.
+
+
+              After each change, you make sure that your code compiles and builds successfully.
+          outgoingConnections:
+            - output->"Subgraph" u8qS4epoJLw3qJzSIpFTK/role
+          visualData: 77/132/330/5
+        '[LkHBeDm43OiqgQ9e-OnCc]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 1021/362/330/7
+        '[TSkVbM0-rX3dCLkXBdodl]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" u8qS4epoJLw3qJzSIpFTK/task
+          visualData: 71/500/330/8
+        '[u8qS4epoJLw3qJzSIpFTK]:subGraph "Subgraph"':
+          data:
+            graphId: nRdCJrENjFUJ4u1qvgWBX
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Graph Output" LkHBeDm43OiqgQ9e-OnCc/value
+          visualData: 609/382/330/6
+    r7TI9AZztyxiF9UDFWs32:
+      metadata:
+        description: ""
+        id: r7TI9AZztyxiF9UDFWs32
+        name: "Agent: documenter-writer-agent"
+      nodes:
+        '[0aElyQnfavPDBsqwSYf1R]:if "If"':
+          outgoingConnections:
+            - output->"Coalesce" EXYDz8l1vaAUWPjfsqw2I/input2
+          visualData: 120.82730627731736/-571.4668731051815/155/49
+        '[5c55EA2yjOMHHyvhpBt-O]:graphInput "Graph Input"':
+          data:
+            dataType: string
+            id: input
+            useDefaultValueInput: false
+          outgoingConnections:
+            - data->"Subgraph" yyIw96hQ_hDYBladwbJYv/task
+          visualData: -2273.020210570853/-438.32264335869934/330/43
+        '[87mSYIaMeUw4HIIqYSZrA]:if "If"':
+          outgoingConnections:
+            - output->"Chat" ju_xZ4QImVrEbTJvYiO95/prompt
+          visualData: 177.37154632330885/307.81247467204713/155/48
+        '[9FNh1gkIKTkh3u0c1KEx5]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Match" rpuONQTpUpSlzKHAOjzxK/input
+          visualData: -933.788253687256/-294.53260671882003/230/null
+        '[A2gFhupVrsSr_n8vu30tT]:writeFile "Write File"':
+          data:
+            content: ""
+            path: ""
+            useContentInput: true
+            usePathInput: true
+          outgoingConnections:
+            - content_out->"Text" PbzTlPgwfGbVz_XQ0Sodc/contents
+          visualData: 2326.1538406002837/284.49199335884896/230/34
+        '[EXYDz8l1vaAUWPjfsqw2I]:coalesce "Coalesce"':
+          outgoingConnections:
+            - output->"Graph Output" TNG-Z9FaYeCIzvO0N_zby/value
+          visualData: 3278.6344590936696/251.66851872868915/180/null
+        '[FfW8L53YRAuZf3Qq6fvuy]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 0.5
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Write File" A2gFhupVrsSr_n8vu30tT/content
+          visualData: 1955.2439295223564/248.49514453758013/230/31
+        '[PbzTlPgwfGbVz_XQ0Sodc]:text "Text"':
+          data:
+            text: |-
+              The {{file_name}} file now contains this documentation:
+
+              ```
+              {{contents}}
+              ```
+          outgoingConnections:
+            - output->"Coalesce" EXYDz8l1vaAUWPjfsqw2I/input1
+          visualData: 2689.1196069971193/221.71616371537942/330/35
+        '[PwLvNUpEwaaCCJcVHHOVT]:text "Text"':
+          data:
+            text: >-
+              The current contents of the {{file_name}} file are:
+
+
+              ```
+
+              {{contents}}
+
+              ```
+
+
+              Reply to this message with the text to save in the {{file_name}} file. The contents of the file will be overwritten with your reply.
+
+
+              Do not use markdown, do not use code blocks. Your response will verbatim be written into the file in question. 
+          outgoingConnections:
+            - output->"Chat" FfW8L53YRAuZf3Qq6fvuy/prompt
+          visualData: 1509.0039751511335/210.41600176456922/330/30
+        '[RjXPQo2YuOWzVh0KJI7IM]:text "Text"':
+          data:
+            text: >-
+              Here are all of the files in the project:
+
+
+              ```
+
+              {{files}}
+
+              ```
+
+
+              First, choose a file that you will save your documentation to. The file is allowed to not exist yet.
+
+
+              Reply to this message with the file you will be saving the documentation to. Only the name of the file.
+          outgoingConnections:
+            - output->"If" 87mSYIaMeUw4HIIqYSZrA/value
+          visualData: -337.37713006010415/415.390538941614/330/47
+        '[TNG-Z9FaYeCIzvO0N_zby]:graphOutput "Graph Output"':
+          data:
+            dataType: string
+            id: output
+          visualData: 3644.899822742974/254.3476302107487/330/51
+        '[Zhg5NK3qnmtSqsmpynMVL]:text "Text"':
+          data:
+            text: >-
+              Have you been given enough information to document? Reply YES or
+              NO
+
+
+              For example, if your documentation task references things you do not know about or do not have access to, you must reply NO.
+
+
+              If your task contains information about the reply from another agent, and that agent's reply has not been repeated to you, you must reply NO, because you do not know what that agent has said.
+          outgoingConnections:
+            - output->"Chat" 9FNh1gkIKTkh3u0c1KEx5/prompt
+          visualData: -1714.1108970459554/-339.12247205360296/330/44
+        '[itI3M3V6iv41Y86eDv6dE]:text "Text"':
+          data:
+            text: "System Message: ERROR, you have not provided anything for the agent to
+              document! Remember, everything for the agent to document must be
+              BELOW the CALL_SYSTEM_COMMAND message."
+          outgoingConnections:
+            - output->"If" 0aElyQnfavPDBsqwSYf1R/value
+          visualData: -353.90179706909817/-545.8058404918619/330/50
+        '[ju_xZ4QImVrEbTJvYiO95]:chat "Chat"':
+          data:
+            cache: false
+            enableFunctionUse: false
+            frequencyPenalty: 0
+            maxTokens: 1024
+            model: gpt-4
+            presencePenalty: 0
+            stop: ""
+            temperature: 1
+            top_p: 1
+            useAsGraphPartialOutput: true
+            useFrequencyPenaltyInput: false
+            useMaxTokensInput: false
+            useModelInput: false
+            usePresencePenaltyInput: false
+            useStop: false
+            useStopInput: false
+            useTemperatureInput: false
+            useTopP: false
+            useTopPInput: false
+            useUseTopPInput: false
+            useUserInput: false
+          outgoingConnections:
+            - response->"Text" PbzTlPgwfGbVz_XQ0Sodc/file_name
+            - response->"Text" PwLvNUpEwaaCCJcVHHOVT/file_name
+            - response->"Text" p1zXeY24UM7WYf8VU6VGl/file_name
+            - response->"Write File" A2gFhupVrsSr_n8vu30tT/path
+          visualData: 500.0310680159823/446.07132603620244/230/42
+        '[kNcX9rT8xEXbFbQ-PlBpb]:text "Text"':
+          data:
+            text: >-
+              You are `documenter-agent` - You are specialized in documenting
+              information that has been given to you.
+
+
+              All of the info for documenting should be given to you now.
+          outgoingConnections:
+            - output->"Subgraph" yyIw96hQ_hDYBladwbJYv/role
+          visualData: -2139.020210570853/-659.3226433586993/330/43
+        '[kPJbyKwvmGegBJUYSE29N]:readFile "Read File"':
+          data:
+            errorOnMissingFile: false
+            path: ""
+            usePathInput: true
+          outgoingConnections:
+            - content->"Text" PwLvNUpEwaaCCJcVHHOVT/contents
+          visualData: 1167.481663405691/40.74933813815596/280/37
+        '[o3OutoGeC63_antoe47e1]:subGraph "Subgraph"':
+          data:
+            graphId: HZsP1FeSEUmRrjtEHz8q_
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Read Directory" z6OQzuD8uD9Dk7vMGAhZU/path
+            - output->"Text" p1zXeY24UM7WYf8VU6VGl/base_directory
+            - output->"Write File" A2gFhupVrsSr_n8vu30tT/baseDirectory
+          visualData: -1104.6618284875726/579.6212803802401/330/47
+        '[p1zXeY24UM7WYf8VU6VGl]:text "Text"':
+          data:
+            text: "{{base_directory}}/{{file_name}}"
+          outgoingConnections:
+            - output->"Read File" kPJbyKwvmGegBJUYSE29N/path
+          visualData: 753.4568008355577/20.959868231542934/330/38
+        '[rpuONQTpUpSlzKHAOjzxK]:match "Match"':
+          data:
+            caseCount: 2
+            cases:
+              - YES
+              - NO
+          outgoingConnections:
+            - case1->"If" 87mSYIaMeUw4HIIqYSZrA/if
+            - case2->"If" 0aElyQnfavPDBsqwSYf1R/if
+          visualData: -582.315197518968/-285.35234032636475/280/45
+        '[yyIw96hQ_hDYBladwbJYv]:subGraph "Subgraph"':
+          data:
+            graphId: VnBZUIzJKa4kx8_e3QsMN
+            useAsGraphPartialOutput: false
+            useErrorOutput: false
+          outgoingConnections:
+            - output->"Chat" 9FNh1gkIKTkh3u0c1KEx5/systemPrompt
+            - output->"Chat" FfW8L53YRAuZf3Qq6fvuy/systemPrompt
+            - output->"Chat" ju_xZ4QImVrEbTJvYiO95/systemPrompt
+          visualData: -1662.020210570853/-619.3226433586993/330/43
+        '[z6OQzuD8uD9Dk7vMGAhZU]:readDirectory "Read Directory"':
+          data:
+            filterGlobs: []
+            ignores:
+              - "**/node_modules/**/*"
+              - "**/dist/**/*"
+            includeDirectories: false
+            path: examples
+            recursive: true
+            relative: true
+            useFilterGlobsInput: false
+            useIgnoresInput: false
+            useIncludeDirectoriesInput: false
+            usePathInput: true
+            useRecursiveInput: false
+            useRelativeInput: false
+          outgoingConnections:
+            - paths->"Text" RjXPQo2YuOWzVh0KJI7IM/files
+          visualData: -711.4903999161443/505.4879470469067/230/47
+  metadata:
+    description: ""
+    id: xVKK7_ZvSNPoYONT5ebD8
+    title: Untitled Project
+  plugins:
+    - id: rivet-plugin-fs@latest
+      package: rivet-plugin-fs
+      tag: latest
+      type: package
