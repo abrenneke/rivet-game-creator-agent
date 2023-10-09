@@ -1997,7 +1997,7 @@ data:
           visualData: -62.96704746690836/28.264103067437404/330/59
         '[8Gr4OPBEQ60FeoUjm-1lB]:trimChatMessages "Trim Chat Messages"':
           data:
-            maxTokenCount: 8192
+            maxTokenCount: 5000
             model: gpt-4-32k
             removeFromBeginning: true
           outgoingConnections:
@@ -2111,7 +2111,7 @@ data:
             enableFunctionUse: false
             frequencyPenalty: 0
             maxTokens: 3000
-            model: gpt-4-32k
+            model: gpt-4
             presencePenalty: 0
             stop: ""
             temperature: 0.5
