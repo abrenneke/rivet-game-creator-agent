@@ -422,6 +422,7 @@ data:
             baseDirectory: ""
             content: ""
             path: ""
+            useBaseDirectoryInput: true
             useContentInput: true
             usePathInput: true
           outgoingConnections:
@@ -590,6 +591,14 @@ data:
           outgoingConnections:
             - output->"Graph Output" eFpytYHsRSrWX7SofmmmC/value
           visualData: 609/382/330/6
+        '[__eb9qWFffx9b-st30j2A]:number "Number"':
+          data:
+            round: false
+            roundTo: 0
+            value: 0.2
+          outgoingConnections:
+            - value->"Subgraph" 6N8V54PZ53b4bJ4091pQF/temperature
+          visualData: 193/719/230/9
         '[eFpytYHsRSrWX7SofmmmC]:graphOutput "Graph Output"':
           data:
             dataType: string
@@ -609,6 +618,14 @@ data:
         id: 2Rwpr98wC2db8xc5eL9Br
         name: "Agent: analyzer-agent"
       nodes:
+        '[-Jf0zLVcyUBEN5PX31Mkc]:number "Number"':
+          data:
+            round: false
+            roundTo: 0
+            value: 0
+          outgoingConnections:
+            - value->"Subgraph" klbVwSpvYf-PH_EHyHRSh/temperature
+          visualData: 186.45578231292518/720.21768707483/230/null
         '[PFfNMBlnbNx5X2EqfjiQ_]:graphOutput "Graph Output"':
           data:
             dataType: string
@@ -639,6 +656,12 @@ data:
 
 
               When encountering errors, you think about what you may have done wrong to cause the error, and you try other approaches. When running commands, you analyze why they might have failed and try other approaches if the error is unclear.
+
+
+              You are an extremely thorough analyzer agent. You do not come to final conclusions on things until you are absolutely sure of them. You read multiple files, and re-read files if needed, to come to a complete analysis.
+
+
+              Your task is done when you have come to a complete analysis and are certain of your answer. Your final reply includes your full analysis including how confident you are.
           outgoingConnections:
             - output->"Subgraph" klbVwSpvYf-PH_EHyHRSh/role
           visualData: 77/132/330/5
@@ -1543,6 +1566,14 @@ data:
             dataType: string
             id: output
           visualData: 946.2660910855518/337.54326623871657/330/48
+        '[pyXRuf74_jEgjIHdCmdXM]:number "Number"':
+          data:
+            round: false
+            roundTo: 0
+            value: 0
+          outgoingConnections:
+            - value->"Subgraph" w6SC2X7cVl8-ShR-LcPxJ/temperature
+          visualData: -72.7078323181288/774.0100300903896/230/9
         '[w6SC2X7cVl8-ShR-LcPxJ]:subGraph "Subgraph"':
           data:
             graphId: nRdCJrENjFUJ4u1qvgWBX
@@ -1566,6 +1597,7 @@ data:
           isSplitRun: true
           outgoingConnections:
             - output->"Text" o_3uRcXA8EhfALUL7X0Il/shared_memory
+          splitRunMax: 10
           visualData: 25.817965929986748/108.22664322899853/330/30
         '[Gf3P2OSDtMxKpSLEn-17X]:text "System Prompt"':
           data:
@@ -1890,8 +1922,18 @@ data:
             inputNames: input
             outputNames: output
           outgoingConnections:
-            - output->"Shell Command" qg3WSuMu4n6qdTLgNcJQi/command
+            - output->"Shell Command" KcfF4a39rzhCwnETTsHVq/command
           visualData: 264/504/230/18
+        '[KcfF4a39rzhCwnETTsHVq]:shellCommand "Shell Command"':
+          data:
+            command: ""
+            errorOnNonZeroExitCode: false
+            useCommandInput: true
+            useWorkingDirectoryInput: true
+            workingDirectory: ""
+          outgoingConnections:
+            - output->"Text" VOYqiVSfJz-4hAzNx_X4J/command_output
+          visualData: 692.2500644507616/398.4776993491373/318.26437984272525/23
         '[VOYqiVSfJz-4hAzNx_X4J]:text "Text"':
           data:
             text: |-
@@ -1909,15 +1951,8 @@ data:
             useAsGraphPartialOutput: false
             useErrorOutput: false
           outgoingConnections:
-            - output->"Shell Command" qg3WSuMu4n6qdTLgNcJQi/baseDirectory
-          visualData: 282/329/330/12
-        '[qg3WSuMu4n6qdTLgNcJQi]:shellCommand "Shell Command"':
-          data:
-            command: ""
-            useCommandInput: true
-          outgoingConnections:
-            - output->"Text" VOYqiVSfJz-4hAzNx_X4J/command_output
-          visualData: 723/482/295/20
+            - output->"Shell Command" KcfF4a39rzhCwnETTsHVq/workingDirectory
+          visualData: 242.59625899878333/278.56321151844264/330/22
     nRdCJrENjFUJ4u1qvgWBX:
       metadata:
         description: ""
@@ -1962,7 +1997,7 @@ data:
           visualData: -62.96704746690836/28.264103067437404/330/59
         '[8Gr4OPBEQ60FeoUjm-1lB]:trimChatMessages "Trim Chat Messages"':
           data:
-            maxTokenCount: 3500
+            maxTokenCount: 8192
             model: gpt-4-32k
             removeFromBeginning: true
           outgoingConnections:
@@ -2076,7 +2111,7 @@ data:
             enableFunctionUse: false
             frequencyPenalty: 0
             maxTokens: 3000
-            model: gpt-4
+            model: gpt-4-32k
             presencePenalty: 0
             stop: ""
             temperature: 0.5
@@ -2088,7 +2123,7 @@ data:
             usePresencePenaltyInput: false
             useStop: false
             useStopInput: false
-            useTemperatureInput: false
+            useTemperatureInput: true
             useTopP: false
             useTopPInput: false
             useUseTopPInput: false
@@ -2099,6 +2134,14 @@ data:
             - response->"Prompt" 4RXQ92yRRWxcaY-BbgTRF/input
             - response->"Subgraph" 2hdJeJBFJjICIJmptOK-N/input
           visualData: 663.7649285696901/462.29402828465777/925.8955434295755/66
+        '[hlUmPWNSYN7zswWBBep1R]:graphInput "Graph Input"':
+          data:
+            dataType: number
+            id: temperature
+            useDefaultValueInput: true
+          outgoingConnections:
+            - data->"Chat" ZPyYIJpeEcRIrYiAP92_g/temperature
+          visualData: -13.629268206792744/949.8134496881304/330/null
         '[iZoyDCdh3SntnPBrE4PnM]:ifElse "If/Else"':
           outgoingConnections:
             - output->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/continue
@@ -2140,6 +2183,14 @@ data:
             - data->"If/Else" ibtECbjeG9Er6h6blVLuM/true
             - data->"Subgraph" IFhaw5os7i9ZZFKUsfkYp/task
           visualData: -2009.316163611785/188.70590646393714/330/53
+        '[tp9JkGl4vhV_4LCExBsrs]:number "Number"':
+          data:
+            round: false
+            roundTo: 0
+            value: 0.5
+          outgoingConnections:
+            - value->"Graph Input" hlUmPWNSYN7zswWBBep1R/default
+          visualData: -328.4296596763419/960.9240517399969/230/68
         '[wpMz24v3L5J4B6x1b6i6t]:assemblePrompt "Assemble Prompt"':
           outgoingConnections:
             - prompt->"Loop Controller" 1u41DVHmlvPMEeQDoI-VF/input1
@@ -2315,6 +2366,14 @@ data:
           outgoingConnections:
             - data->"Subgraph" u8qS4epoJLw3qJzSIpFTK/task
           visualData: 71/500/330/8
+        '[Z1_dLyG1Lkn7kGaVK1ohU]:number "Number"':
+          data:
+            round: false
+            roundTo: 0
+            value: 0.2
+          outgoingConnections:
+            - value->"Subgraph" u8qS4epoJLw3qJzSIpFTK/temperature
+          visualData: 133.40924092409236/684.5808580858086/230/9
         '[u8qS4epoJLw3qJzSIpFTK]:subGraph "Subgraph"':
           data:
             graphId: nRdCJrENjFUJ4u1qvgWBX
